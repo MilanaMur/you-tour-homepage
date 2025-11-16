@@ -1,0 +1,25 @@
+@use "./base/_reset.scss";
+@use "./base/_fonts.scss";
+@use "./blocks/header";
+@use "./blocks/hero";
+@use "./utils/variables" as *;
+@use "./utils/mixins" as *;
+
+.page {
+  font-family: $main-font;
+  color: $main-color;
+  font-size: $subtitle-size;
+  font-weight: $regular-text;
+  background: $background-overlay, url($background-path);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include respond-to(tablet) {
+    font-size: $subtitle-size-tablet;
+  }
+
+  @include respond-to(desktop) {
+    font-size: $subtitle-size-desktop;
+  }
+}

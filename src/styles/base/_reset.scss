@@ -1,0 +1,49 @@
+/* ===== СБРОС БРАУЗЕРНЫХ СТИЛЕЙ ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  background: none;
+  font: inherit;
+  outline: none;
+}
+
+body {
+  line-height: 1.42;
+  letter-spacing: 0;
+  block-size: 100vh;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

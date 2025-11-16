@@ -1,0 +1,60 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 31px 20px;
+
+  &__logo {
+    inline-size: 135px;
+    block-size: 25px;
+  }
+
+  &__menu {
+    display: none;
+  }
+
+  &__contact:hover {
+    border-bottom: 2px solid $main-color;
+  }
+
+  @include respond-to(tablet) {
+    padding: 25px 45px;
+
+    &__menu {
+      display: block;
+    }
+
+    &__menu-list {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    &__menu-item:hover {
+      border-bottom: 2px solid $main-color;
+    }
+  }
+
+  @include respond-to(desktop) {
+    padding: 29px 57px;
+
+    &__logo {
+      inline-size: 182px;
+      block-size: 31px;
+    }
+
+    &__menu-list {
+      gap: 30px;
+    }
+  }
+
+  @include respond-to(wide) {
+    padding: 29px 376px;
+
+    &__menu-list {
+      gap: 50px;
+    }
+  }
+}
